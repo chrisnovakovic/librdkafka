@@ -227,10 +227,11 @@ static const char *rd_kafka_admin_state_desc[] = {
  * @enum Admin request target broker. Must be negative values since the field
  *       used is broker_id.
  */
-enum { RD_KAFKA_ADMIN_TARGET_CONTROLLER  = -1, /**< Cluster controller */
-       RD_KAFKA_ADMIN_TARGET_COORDINATOR = -2, /**< (Group) Coordinator */
-       RD_KAFKA_ADMIN_TARGET_FANOUT      = -3, /**< This rko is a fanout and
-                                                *   and has no target broker */
+enum {
+        RD_KAFKA_ADMIN_TARGET_CONTROLLER  = -1, /**< Cluster controller */
+        RD_KAFKA_ADMIN_TARGET_COORDINATOR = -2, /**< (Group) Coordinator */
+        RD_KAFKA_ADMIN_TARGET_FANOUT      = -3, /**< This rko is a fanout and
+                                                 *   and has no target broker */
 };
 
 /**

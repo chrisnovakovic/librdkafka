@@ -228,9 +228,9 @@ rd_kafka_resp_err_t rd_kafka_parse_Metadata(rd_kafka_broker_t *rkb,
         rd_bool_t all_topics = request->rkbuf_u.Metadata.all_topics;
         rd_bool_t cgrp_update =
             request->rkbuf_u.Metadata.cgrp_update && rk->rk_cgrp;
-        const char *reason = request->rkbuf_u.Metadata.reason
-                                 ? request->rkbuf_u.Metadata.reason
-                                 : "(no reason)";
+        const char *reason         = request->rkbuf_u.Metadata.reason
+                                         ? request->rkbuf_u.Metadata.reason
+                                         : "(no reason)";
         int ApiVersion             = request->rkbuf_reqhdr.ApiVersion;
         rd_kafkap_str_t cluster_id = RD_ZERO_INIT;
         int32_t controller_id      = -1;

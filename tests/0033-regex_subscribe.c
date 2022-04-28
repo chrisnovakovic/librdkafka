@@ -46,13 +46,14 @@ struct expect {
         int exp_err;        /* expected error from subscribe() */
         int stat[4];        /* per exp status */
         int fails;
-        enum { _EXP_NONE,
-               _EXP_FAIL,
-               _EXP_OK,
-               _EXP_ASSIGN,
-               _EXP_REVOKE,
-               _EXP_ASSIGNED,
-               _EXP_REVOKED,
+        enum {
+                _EXP_NONE,
+                _EXP_FAIL,
+                _EXP_OK,
+                _EXP_ASSIGN,
+                _EXP_REVOKE,
+                _EXP_ASSIGNED,
+                _EXP_REVOKED,
         } result;
 };
 

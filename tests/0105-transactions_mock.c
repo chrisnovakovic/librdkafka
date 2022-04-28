@@ -1772,8 +1772,8 @@ retry:
                 /* The retry should succeed */
                 test_curr->ignore_dr_err = rd_false;
                 test_curr->exp_dr_err    = is_retry
-                                            ? RD_KAFKA_RESP_ERR_NO_ERROR
-                                            : RD_KAFKA_RESP_ERR__MSG_TIMED_OUT;
+                                               ? RD_KAFKA_RESP_ERR_NO_ERROR
+                                               : RD_KAFKA_RESP_ERR__MSG_TIMED_OUT;
 
                 rd_kafka_mock_partition_set_leader(mcluster, topic, 0, 1);
                 rd_kafka_mock_partition_set_leader(mcluster, topic, 1, 1);

@@ -77,9 +77,9 @@ int rd_kafka_sasl_plain_client_new(rd_kafka_transport_t *rktrans,
         int cidlen = rk->rk_conf.sasl.username
                          ? (int)strlen(rk->rk_conf.sasl.username)
                          : 0;
-        int pwlen = rk->rk_conf.sasl.password
-                        ? (int)strlen(rk->rk_conf.sasl.password)
-                        : 0;
+        int pwlen  = rk->rk_conf.sasl.password
+                         ? (int)strlen(rk->rk_conf.sasl.password)
+                         : 0;
 
 
         buf = rd_alloca(zidlen + 1 + cidlen + 1 + pwlen + 1);
